@@ -1,0 +1,12 @@
+0x3003   // MOV R0, 3
+0xB010   // CALL factorial function at address 0x10
+0xA000   // HLT
+
+// Factorial function at memory[0x10]
+0x3101   // MOV R1, 1 (base case)
+0x8201   // CMP R0, R1
+0x9002   // JMP to end if R0 == R1
+0x4001   // SUB R0, 1 (decrement R0)
+0xB010   // Recursive CALL
+0x5000   // MUL result
+0xC000   // RET
